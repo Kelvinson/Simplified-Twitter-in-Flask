@@ -14,11 +14,11 @@ class RegisterForm(Form):
         ]
     )
     username = StringField('Username', [
-        validators.Required(),
+        validators.DataRequired(),
         validators.length(min=4,max=25)
         ])
     password = PasswordField('New Password', [
-        validators.Required(),
+        validators.DataRequired(),
         validators.EqualTo('confirm',message='Password must match'),
         validators.length(min=4,max=80)
         ])
